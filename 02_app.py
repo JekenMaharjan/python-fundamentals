@@ -46,4 +46,20 @@ def count_words(sentence):
 
 print(f"Words count : {count_words("I love Python programming")}")
 
+# ==========================================================================================
+# Question 4: Find Largest Number
+# Problem: Find the largest number in a list.
+# ==========================================================================================
+def largest_num(arr):
+    # return max(arr) # one-line answer to find max out of array
+    
+    # Alternative:
+    largest = arr[0]
+    
+    for num in arr:
+        if(num > largest):
+            largest = num
+    
+    return largest
 
+print(f"Largest number : {largest_num([22,33,12,4,52,34,6])}")
