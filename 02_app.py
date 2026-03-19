@@ -84,4 +84,23 @@ def count_elements(numbers):
 
 print(f"Count occurrences : {count_elements([1,2,2,3,3,3])}")
 
+# ==========================================================================================
+# Question 6: Remove Duplicates
+# Problem: Multiple same elements in a list
+# Example:
+    # Input: [1,2,2,3,4,4,5]
+    # Output: [1,2,3,4,5]
+# ==========================================================================================
+def remove_duplicates(numbers):
+    # return list(set(numbers))
+    
+    # Alternative:
+    unique = []
+    
+    for num in numbers:
+        if num not in unique:
+            unique.append(num)
+            
+    return unique
 
+print(f"List are removing duplicates : {remove_duplicates([1,2,2,3,4,4,5])}")
