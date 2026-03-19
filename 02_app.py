@@ -13,7 +13,7 @@ def sum_list(arr):
         
     return sum
     
-print(f"Sum of all numbers in a list is {sum_list([1,2,3,4])}")
+print(f"Sum of list : {sum_list([1,2,3,4])}")
 
 # ==========================================================================================
 # Question 2: Find Even Numbers
@@ -63,3 +63,25 @@ def largest_num(arr):
     return largest
 
 print(f"Largest number : {largest_num([22,33,12,4,52,34,6])}")
+
+# ==========================================================================================
+# Question 5: Count Occurrences (Important)
+# Problem: Count how many times each element appears in a list.
+# Example:
+    # Input: [1,2,2,3,3,3]
+    # Output: {1:1, 2:2, 3:3}
+# ==========================================================================================
+def count_elements(numbers):
+    count_dict = {}
+    
+    for num in numbers:
+        if num in count_dict:
+            count_dict[num] += 1
+        else:
+            count_dict[num] = 1
+    
+    return count_dict
+
+print(f"Count occurrences : {count_elements([1,2,2,3,3,3])}")
+
+
