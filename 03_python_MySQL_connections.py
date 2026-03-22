@@ -1,14 +1,21 @@
+# Library Management System
+
 import mysql.connector
+from dotenv import load_dotenv
+import os
 
 # ========================================================================================
+
+# Load .env file
+load_dotenv()
 
 # Connect to MySQL
 
 conn = mysql.connector.connect(
-    host="localhost",       # usually localhost
-    user="root",            # MySQL username
-    password="Dota2DayNightHuntr@2026",  # MySQL password
-    database="library_db"      # database name
+    host = os.getenv("DB_HOST"),       # usually localhost
+    user = os.getenv("DB_USER"),          # MySQL username
+    password = os.getenv("DB_PASSWORD"),  # MySQL password
+    database = "library_db"      # database name
 )
 
 cursor = conn.cursor()
